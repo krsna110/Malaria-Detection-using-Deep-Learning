@@ -104,3 +104,66 @@ All the required libraries were successfully imported to support data analysis, 
 
 
 
+\## Activity 2.2: Reading the Dataset
+
+In this step, the malaria cell image dataset was loaded and prepared for training the deep learning model.
+
+The dataset consists of microscopic images of red blood cells that are categorized into two classes: **Parasitized** and **Uninfected**.
+
+Reading the dataset is an important step because the model must first access and understand the input data before learning patterns from it. The images are stored in folders and are loaded into the program using TensorFlow’s data preprocessing tools.
+
+
+
+\### Dataset Description
+
+\*\*Parasitized\*\*
+
+This folder contains images of red blood cells that are infected with malaria parasites.
+
+
+\*\*Uninfected\*\*
+
+This folder contains images of healthy red blood cells without malaria infection.
+
+The dataset is organized into two main directories:
+
+
+\*\*Training Dataset\*\*
+
+Used for training the deep learning model.
+
+
+\*\*Validation Dataset\*\*
+
+Used to evaluate the performance of the model during training.
+
+
+\### Reading Dataset Code
+
+```python
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+
+# Creating Image Data Generators
+train_datagen = ImageDataGenerator(rescale=1./255)
+val_datagen = ImageDataGenerator(rescale=1./255)
+
+# Loading Training Dataset
+train_generator = train_datagen.flow_from_directory(
+    "dataset/train",
+    target_size=(224,224),
+    batch_size=32,
+    class_mode="binary"
+)
+
+# Loading Validation Dataset
+val_generator = val_datagen.flow_from_directory(
+    "dataset/val",
+    target_size=(224,224),
+    batch_size=32,
+    class_mode="binary"
+
+```
+
+\###Conclusion
+
+The malaria dataset was successfully read using the ImageDataGenerator and flow_from_directory() functions. The images were resized, normalized, and prepared in batches so they can be used efficiently for training the deep learning model.
