@@ -1,0 +1,114 @@
+Dataset Collection 
+1. Introduction
+
+Dataset collection is the first and most important step in building a deep learning model. In the malaria detection project, we need a dataset containing microscopic images of red blood cells (RBCs). These images help the model learn the difference between malaria-infected cells and healthy cells.
+
+The dataset is used to train, validate, and test the deep learning model so that it can automatically detect malaria from blood smear images.
+
+2. Dataset Source
+
+For this project we are using the Malaria Cell Images Dataset provided by the
+National Institutes of Health (NIH).
+
+It is one of the most commonly used datasets for malaria detection research.
+
+3. Dataset Description
+
+The dataset contains 27,558 cell images taken from microscopic blood smear slides.
+
+The dataset is divided into two classes:
+
+Class	Description
+Parasitized	Cells infected with malaria parasite
+Uninfected	Normal healthy red blood cells
+Dataset Statistics
+
+Total Images: 27,558
+
+Parasitized Images: 13,779
+
+Uninfected Images: 13,779
+
+Image Type: Microscopic images of RBCs
+
+This balanced dataset helps the deep learning model learn equally from both classes.
+
+4. Dataset Structure
+
+After downloading and extracting the dataset, the folder structure looks like this:
+
+cell_images/
+
+   Parasitized/
+      C1.png
+      C2.png
+      C3.png
+      ...
+
+   Uninfected/
+      C1.png
+      C2.png
+      C3.png
+      ...
+
+Each folder contains images belonging to a specific class.
+
+5. Why This Dataset is Suitable
+
+This dataset is widely used for medical image classification because:
+
+High number of labeled images
+
+Balanced dataset
+
+Real microscopic blood smear images
+
+Suitable for Convolutional Neural Networks (CNN)
+
+These properties make it ideal for building a malaria detection deep learning model.
+
+6. Tools Used for Dataset Collection
+
+The following tools were used:
+
+Python
+
+Jupyter Notebook
+
+Kaggle platform
+
+Google Colab (optional)
+
+These tools help download, organize, and preprocess the dataset.
+
+7. Steps to Download Dataset
+
+Go to Kaggle website
+
+Search for Malaria Cell Images Dataset
+
+Download the dataset
+
+Extract the zip file
+
+Store the dataset in the project folder
+
+Example directory:
+
+Malaria-Detection-Project
+    ├── dataset
+    │    ├── Parasitized
+    │    └── Uninfected
+    ├── notebook
+    └── README.md
+8. Importance of Dataset Collection
+
+Dataset collection is important because:
+
+It provides training data for the deep learning model
+
+Helps the model learn patterns in infected cells
+
+Improves model accuracy
+
+Enables automatic malaria diagnosis
