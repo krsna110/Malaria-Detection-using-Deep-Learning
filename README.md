@@ -3,6 +3,46 @@
 \# Malaria Detection using Deep Learning
 
 
+\## Project Flow
+
+This project follows a structured pipeline to build a deep learning model for malaria detection from microscopic blood cell images.
+
+
+
+\### 1. Data Collection and Data Preprocessing
+- Download and organize the malaria cell image dataset.
+- Perform data exploration and visualization.
+- Apply image preprocessing and augmentation (if required).
+- Split the dataset into training and validation sets.
+  
+
+\### 2. Model Building
+- Import the required Python libraries.
+- Load the pre-trained **MobileNetV2** model.
+- Fine-tune the model architecture.
+- Configure model compilation (optimizer, loss function, metrics).
+- Set up training callbacks.
+  
+
+\### 3. Model Training
+- Train the model using image data generators.
+- Monitor training progress.
+- Implement **EarlyStopping** and **ReduceLROnPlateau** to improve training.
+  
+
+\### 4. Model Evaluation
+- Evaluate model performance on the validation dataset.
+- Visualize training metrics such as accuracy and loss.
+- Save the best performing trained model.
+  
+
+\### 5. Application Development
+- Create HTML templates for the web interface.
+- Develop a Flask backend.
+- Integrate the trained model with the web application.
+- Test the complete system end-to-end.
+
+
 
 \## Activity 2.1: Importing the Libraries
 
