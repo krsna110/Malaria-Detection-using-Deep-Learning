@@ -167,3 +167,26 @@ val_generator = val_datagen.flow_from_directory(
 \###Conclusion
 
 The malaria dataset was successfully read using the ImageDataGenerator and flow_from_directory() functions. The images were resized, normalized, and prepared in batches so they can be used efficiently for training the deep learning model.
+
+
+
+\## Activity 4: Saving the Model
+
+After training the deep learning model, it is important to save the trained model so that it can be reused later without retraining.
+
+Saving the model allows us to load it directly in the web application and perform predictions on new blood cell images.
+
+In this project, the trained model is saved using the `model.save()` function from TensorFlow Keras. The model is stored in **HDF5 format (.h5)** which contains the model architecture, learned weights, and training configuration.
+
+
+
+\### Saving Model Code
+
+```python
+import tensorflow as tf
+
+# Save the trained model
+model.save("malaria_model.h5")
+
+print("Model saved successfully as malaria_model.h5")
+```
